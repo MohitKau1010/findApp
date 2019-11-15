@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+        <RelativeLayout
+                android:id="@+id/rlUserHomeControl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/ivAddFav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/tool_heart" />
+
+            <!--                <ImageView-->
+            <!--                        android:mid="@+mid/left_image_home_tool"-->
+            <!--                          android:layout_width="wrap_content"-->
+            <!--                         android:layout_height="wrap_content"-->
+            <!--                     android:layout_centerVertical="true"-->
+            <!--                    android:layout_margin="10dp"-->
+            <!--                      android:background="@drawable/ic_heart"-->
+            <!--                        android:visibility="invisible" />-->
+
+            <TextView
+                    android:id="@+id/title_center_text_home_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="@string/txt_home"
+                    android:textColor="@color/btn_gray"
+                    android:textSize="18sp" />
+
+            <ImageView
+                    android:id="@+id/right_image_home_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@id/right_end_image_userhome_tool"
+                    android:src="@drawable/ic_pin" />
+
+            <ImageView
+                    android:id="@+id/right_end_image_userhome_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_search"
+                    android:padding="10dp" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/grey" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical">
+
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabIndicatorHeight="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                app:tabSelectedTextColor="@color/txt_dark"
+                app:tabTextColor="@color/txt_dark" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey" />
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 />
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+        <!--        <FrameLayout-->
+        <!--                android:mid="@+mid/container"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+    </LinearLayout>
+</FrameLayout>

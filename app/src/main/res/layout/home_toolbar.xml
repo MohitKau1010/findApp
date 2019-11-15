@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+    <RelativeLayout
+            android:id="@+id/rlUserHomeControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/img_add_fav_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/tool_heart" />
+
+        <!--                <ImageView-->
+        <!--                        android:id="@+id/left_image_home_tool"-->
+        <!--                          android:layout_width="wrap_content"-->
+        <!--                         android:layout_height="wrap_content"-->
+        <!--                     android:layout_centerVertical="true"-->
+        <!--                    android:layout_margin="10dp"-->
+        <!--                      android:background="@drawable/ic_heart"-->
+        <!--                        android:visibility="invisible" />-->
+
+        <TextView
+                android:id="@+id/title_center_text_home_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="@string/txt_home"
+                android:textColor="@color/btn_gray"
+                android:textSize="18sp" />
+
+        <ImageView
+                android:id="@+id/img_location_home_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_toStartOf="@id/img_search_home_tool"
+                android:src="@drawable/ic_pin" />
+
+        <ImageView
+                android:id="@+id/img_search_home_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_search"
+                android:padding="10dp" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/grey"
+                android:layout_marginBottom="2dp" />
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
+

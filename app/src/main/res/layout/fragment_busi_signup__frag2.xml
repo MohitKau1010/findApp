@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel2"
+                type="com.brewfinder.app.ui.base_screen.fragment.business_signup.BusinessSignupViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_height="match_parent">
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/logo_with_shape" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/iv_logo"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="40dp"
+                        android:layout_marginTop="-40dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="20dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="User Name:"
+                        android:textColor="@color/txt_dark"/>
+
+                    <EditText
+                            android:id="@+id/et_Bcompany_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel2.companyName}"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                        android:hint="Company Name"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location:"
+                        android:textColor="@color/txt_dark"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_location_pick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_weight="4"
+                            android:padding="10dp"
+                                android:textColor="@color/txt_dark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                                android:text="@{viewmodel2.textLocation}" />
+                        <ImageView
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:alpha="0.6"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/pin"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/txt_dark"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Company Logo:"
+                        android:textColor="@color/txt_dark"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_image_pick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+                        <TextView
+                            android:id="@+id/tv_image_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                                android:text="@string/logo_jpg"
+                            android:layout_weight="4"/>
+                        <ImageView
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/paper_clip"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/txt_dark"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hours_of_operation"
+                        android:textColor="@color/txt_dark"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/tv_open_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                                android:text="@={viewmodel2.textOpenTime}"
+                            android:hint="00:00AM "
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_close_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="- 00:00PM"
+                                android:text="@={viewmodel2.textCloseTime}"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/txt_dark"/>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_busiSignup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/btn_gray"
+                        android:text="@string/signup"
+                            android:onClick="@{()->viewmodel2.businessSignup()}"
+                        android:textAllCaps="false"
+                            app:cornerRadius="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                            android:id="@+id/go_to_signIn2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/signUpAcc"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:id="@+id/tv_signUp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:padding="2dp"
+                                android:textColor="@color/dark_grey"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/txt_signIn"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+<!--        <ImageView-->
+        <!--            android:mid="@+mid/img_back"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="331dp"-->
+<!--            android:src="@drawable/ic_arrow_back"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

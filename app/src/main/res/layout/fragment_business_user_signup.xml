@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewmodel"
+                type="com.brewfinder.app.ui.base_screen.fragment.business_signup.BusinessSignupViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+            android:layout_height="match_parent">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="@drawable/logo_with_shape" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/iv_logo"
+                        android:layout_marginTop="-40dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingBottom="20dp">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/business_name"
+                            android:textColor="@color/txt_dark" />
+
+                    <EditText
+                            android:id="@+id/et_Uname_business"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/business"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:text="@={viewmodel.name}" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email_address"
+                            android:textColor="@color/txt_dark" />
+
+                    <EditText
+                            android:id="@+id/et_Bemail_business"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/emailaddress_gmail_com"
+                            android:inputType="textEmailAddress"
+                            android:text="@={viewmodel.email}" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number"
+                            android:textColor="@color/txt_dark" />
+
+                    <EditText
+                            android:id="@+id/et_phone_business"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/_555_555_55555"
+                            android:inputType="phone"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:text="@={viewmodel.mobile}" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/password"
+                            android:textColor="@color/txt_dark" />
+
+                    <EditText
+                            android:id="@+id/et_Bpassword_business"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="*********"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:text="@={viewmodel.password}" />
+
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_busiSignup_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:backgroundTint="@color/btn_gray"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/next"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:cornerRadius="9dp" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/signUpAcc"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:id="@+id/go_to_signIn1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_horizontal"
+                                android:padding="2dp"
+                                android:text="@string/txt_signIn"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+        <!--    <androidx.appcompat.widget.AppCompatImageView-->
+        <!--        android:mid="@+mid/img_back"-->
+        <!--        android:layout_width="40dp"-->
+        <!--        android:layout_height="40dp"-->
+        <!--        android:layout_marginStart="10dp"-->
+        <!--        android:layout_marginTop="20dp"-->
+        <!--        android:layout_marginEnd="331dp"-->
+        <!--        android:src="@drawable/ic_arrow_back"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-BrewFinder.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-BrewFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/AndroidStudioProjects-BrewFinder-app.iml" filepath="$PROJECT_DIR$/app/AndroidStudioProjects-BrewFinder-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Brew Finder.iml" filepath="$PROJECT_DIR$/Brew Finder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/Brew Finder-app.iml" filepath="$PROJECT_DIR$/app/Brew Finder-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BrewFinder.iml" filepath="$PROJECT_DIR$/BrewFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/BrewFinder-app.iml" filepath="$PROJECT_DIR$/app/BrewFinder-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BrewFinderNew.iml" filepath="$PROJECT_DIR$/BrewFinderNew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/BrewFinderNew-app.iml" filepath="$PROJECT_DIR$/app/BrewFinderNew-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BrewFinder_8.iml" filepath="$PROJECT_DIR$/BrewFinder_8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/BrewFinder_8-app.iml" filepath="$PROJECT_DIR$/app/BrewFinder_8-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shubhamkumar-BrewFinder.iml" filepath="$PROJECT_DIR$/shubhamkumar-BrewFinder.iml" />
+    </modules>
+  </component>
+</project>

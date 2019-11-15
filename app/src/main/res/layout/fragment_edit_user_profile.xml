@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+    <include
+            android:id="@+id/include_user_toolbar"
+            layout="@layout/user_profile_toolbar" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_image"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_edit_profile_pic"
+            app:civ_border_color="@color/imageBorder"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include_user_toolbar" />
+
+    <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/profile_user_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/include_user_toolbar" />
+
+    <TextView
+            android:id="@+id/tv_count_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/count_following"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+            tools:ignore="SmallSp" />
+
+
+    <TextView
+            android:id="@+id/tv_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/following"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_count_following" />
+
+    <TextView
+            android:id="@+id/tv_count_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/count_followers"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_count_following"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+            tools:ignore="SmallSp" />
+
+    <TextView
+            android:id="@+id/tv_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/followers"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_following"
+            app:layout_constraintTop_toBottomOf="@+id/tv_count_followers" />
+
+    <TextView
+            android:id="@+id/tv_count_blocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/count_blocked"
+
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_count_followers"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+            tools:ignore="SmallSp" />
+
+    <TextView
+            android:id="@+id/tv_blocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/blocked_users"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_followers"
+            app:layout_constraintTop_toBottomOf="@+id/tv_count_blocked" />
+
+    <ImageView
+            android:id="@+id/im_edit_user_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_edit_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_followers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/include_user_toolbar" />
+
+
+    <TextView
+            android:id="@+id/tv_edit_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/user_name"
+            android:textColor="@color/navy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_profile_image" />
+
+    <EditText
+            android:id="@+id/et_edit_user_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="22dp"
+            android:inputType="textEmailAddress"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/im_edit_user_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_edit_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/user_profile_image" />
+
+    <ImageView
+            android:id="@+id/im_edit_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_edit_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_edit_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/user_profile_image" />
+
+
+    <TextView
+            android:id="@+id/tv_business_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/business_email"
+            android:textColor="@color/navy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_edit_user_name" />
+
+    <TextView
+            android:id="@+id/tv_business_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/phone_no"
+            android:textColor="@color/navy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_business_email" />
+
+    <TextView
+            android:id="@+id/tv_user_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/location"
+            android:textColor="@color/navy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_business_phone" />
+
+    <EditText
+            android:id="@+id/et_edit_user_email"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:inputType="textEmailAddress"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_business_email"
+            app:layout_constraintTop_toBottomOf="@+id/et_edit_user_name" />
+
+    <ImageView
+            android:id="@+id/im_edit_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_edit_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_edit_user_email"
+            app:layout_constraintTop_toBottomOf="@+id/im_edit_user_name" />
+
+    <EditText
+            android:id="@+id/et_edit_user_phone"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:inputType="phone"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_business_phone"
+            app:layout_constraintTop_toBottomOf="@+id/et_edit_user_email" />
+
+    <ImageView
+            android:id="@+id/im_edit_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_edit_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_edit_user_phone"
+            app:layout_constraintTop_toBottomOf="@+id/im_edit_user_email" />
+
+    <EditText
+            android:id="@+id/et_edit_user_location"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:inputType="textPhonetic"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_location"
+            app:layout_constraintTop_toBottomOf="@+id/et_edit_user_phone" />
+
+    <ImageView
+            android:id="@+id/im_edit_user_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_edit_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_edit_user_location"
+            app:layout_constraintTop_toBottomOf="@+id/im_edit_user_phone" />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/change_password"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:backgroundTint="@color/btn_gray"
+            app:cornerRadius="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_location" />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_SaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="@color/btn_gray"
+            android:text="@string/save_changes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_ChangePassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

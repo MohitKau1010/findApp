@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.business.fragments.business_profile.EditBusinessProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+        <include
+                android:id="@+id/include_business_toolbar"
+                layout="@layout/business_profile_toolbar" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile_image"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/profile_icon"
+                app:civ_border_color="@color/imageBorder"
+                app:civ_border_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include_business_toolbar" />
+
+        <TextView
+                android:id="@+id/tv_edit_brewery_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"
+                android:text="@string/brewery_name"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/include_business_toolbar" />
+
+        <TextView
+                android:id="@+id/tv_edit_business_profile_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/profile_user_address"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_edit_brewery_name"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_count_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count_following"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_edit_business_profile_address"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/following"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_count_following" />
+
+        <TextView
+                android:id="@+id/tv_count_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count_followers"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@+id/tv_count_following"
+                app:layout_constraintTop_toBottomOf="@+id/tv_edit_business_profile_address"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/followers"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_following"
+                app:layout_constraintTop_toBottomOf="@+id/tv_count_followers" />
+
+        <TextView
+                android:id="@+id/tv_count_blocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/count_blocked"
+
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_count_followers"
+                app:layout_constraintTop_toBottomOf="@+id/tv_edit_business_profile_address"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_blocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/blocked_users"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_followers"
+                app:layout_constraintTop_toBottomOf="@+id/tv_count_blocked" />
+
+        <ImageView
+                android:id="@+id/ic_chatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_chat_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_profile_image" />
+
+        <TextView
+                android:id="@+id/tv_inbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/inbox"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_chatIcon" />
+
+        <ImageView
+                android:id="@+id/ic_locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintStart_toEndOf="@+id/ic_chatIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_followers" />
+
+        <ImageView
+                android:id="@+id/ic_statIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="45dp"
+                android:src="@drawable/ic_stats_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_locationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_blocked" />
+
+        <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/location"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_inbox"
+                app:layout_constraintTop_toBottomOf="@+id/ic_locationIcon" />
+
+        <TextView
+                android:id="@+id/tv_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/stats"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_location"
+                app:layout_constraintTop_toBottomOf="@+id/ic_statIcon" />
+
+
+        <ImageView
+                android:id="@+id/ic_notificationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_notification_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_inbox" />
+
+        <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/notification"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_notificationIcon" />
+
+        <ImageView
+                android:id="@+id/ic_searchIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintStart_toEndOf="@+id/ic_notificationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+        <ImageView
+                android:id="@+id/ic_saveIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="45dp"
+                android:src="@drawable/ic_save_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_searchIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_stats" />
+
+        <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/search"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_notification"
+                app:layout_constraintTop_toBottomOf="@+id/ic_searchIcon" />
+
+        <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/save"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_search"
+                app:layout_constraintTop_toBottomOf="@+id/ic_saveIcon" />
+
+
+        <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="25dp"
+                android:background="@color/user_profile_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_save" />
+
+        <TextView
+                android:id="@+id/tv_business_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/business_email"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/navy"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+                android:id="@+id/tv_business_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_no"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/navy"
+                app:layout_constraintTop_toBottomOf="@+id/tv_business_email"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+                android:id="@+id/tv_business_operation_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours_of_operation_profile"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/navy"
+                app:layout_constraintTop_toBottomOf="@+id/tv_business_phone"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+                android:id="@+id/et_business_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginStart="180dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintStart_toEndOf="@+id/tv_business_email" />
+
+        <EditText
+                android:id="@+id/et_business_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:inputType="phone"
+                android:layout_marginStart="180dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_business_email"
+                app:layout_constraintStart_toEndOf="@+id/tv_business_phone" />
+
+        <EditText
+                android:id="@+id/et_business_operation_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:inputType="textPhonetic"
+                android:layout_marginStart="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_business_phone"
+                app:layout_constraintStart_toEndOf="@+id/tv_business_operation_hours" />
+
+        <TextView
+                android:id="@+id/tv_about_brewery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_brewery"
+                android:textSize="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_business_operation_hours"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold" />
+
+        <EditText
+                android:id="@+id/et_about_brewery_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/txt_light"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_about_brewery"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="normal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

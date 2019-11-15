@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/welcome"
+                    tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginEnd="35dp"
+                        android:inputType="number"
+                        android:text="@string/otp"
+                        android:textColor="@color/txt_dark" />
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:hint="@string/_4526"
+                        android:inputType="textPassword" />
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginEnd="35dp"
+                        android:text="@string/new_password"
+                        android:textColor="@color/txt_dark" />
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:inputType="textPassword"
+                        android:hint="@string/hint_new" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginEnd="35dp"
+                        android:text="@string/confirm_password"
+                        android:textColor="@color/txt_dark" />
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:hint="@string/confirm_password"
+                        android:layout_marginRight="35dp"
+                        android:inputType="textPassword" />
+
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="35dp"
+                        android:background="@drawable/btn_bg"
+                        android:text="@string/reset_password"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:cornerRadius="8dp" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:padding="10dp"
+                            android:text="@string/didnot_received"
+                            android:textSize="16sp" />
+
+                    <TextView
+                            android:id="@+id/tv_signIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/resend"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

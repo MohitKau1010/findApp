@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".ui.business.business_home.fragment.business_profile.BusinessProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/include_business_toolbar"
+                layout="@layout/business_profile_toolbar" />
+
+        <!--        <androidx.constraintlayout.widget.Guideline-->
+        <!--                android:mid="@+mid/gl_user_detail"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                app:layout_constraintGuide_percent="0.90" />-->
+
+        <!--        <androidx.constraintlayout.widget.Guideline-->
+        <!--                android:mid="@+mid/gl_recView"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                app:layout_constraintGuide_percent="0.92" />-->
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile_image"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/profile_icon"
+                app:civ_border_color="@color/imageBorder"
+                app:civ_border_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include_business_toolbar" />
+
+        <TextView
+                android:id="@+id/tv_brewery_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/brewery_name"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/include_business_toolbar" />
+
+        <TextView
+                android:id="@+id/tv_count_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count_following"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brewery_name"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/following"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_count_following" />
+
+        <TextView
+                android:id="@+id/tv_count_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count_followers"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@+id/tv_count_following"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brewery_name"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/followers"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_following"
+                app:layout_constraintTop_toBottomOf="@+id/tv_count_followers" />
+
+        <TextView
+                android:id="@+id/tv_count_blocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/count_blocked"
+
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_count_followers"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brewery_name"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_blocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/blocked_users"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_followers"
+                app:layout_constraintTop_toBottomOf="@+id/tv_count_blocked" />
+
+        <ImageView
+                android:id="@+id/ic_chatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_chat_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_profile_image" />
+
+        <TextView
+                android:id="@+id/tv_inbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/inbox"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_chatIcon" />
+
+        <ImageView
+                android:id="@+id/ic_locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintStart_toEndOf="@+id/ic_chatIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_followers" />
+
+        <ImageView
+                android:id="@+id/ic_statIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_stats_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_locationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_blocked" />
+
+        <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/location"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_inbox"
+                app:layout_constraintTop_toBottomOf="@+id/ic_locationIcon" />
+
+        <TextView
+                android:id="@+id/tv_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/stats"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_location"
+                app:layout_constraintTop_toBottomOf="@+id/ic_statIcon" />
+
+
+        <ImageView
+                android:id="@+id/ic_notificationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_notification_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_inbox" />
+
+        <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/notification"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_notificationIcon" />
+
+        <ImageView
+                android:id="@+id/ic_searchIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintStart_toEndOf="@+id/ic_notificationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+        <ImageView
+                android:id="@+id/ic_edit_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_edit_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_searchIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_stats" />
+
+        <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="87dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/search"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_notification"
+                app:layout_constraintTop_toBottomOf="@+id/ic_searchIcon" />
+
+        <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="25dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="78dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/edit"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_search"
+                app:layout_constraintTop_toBottomOf="@+id/ic_edit_icon" />
+
+        <EditText
+                android:id="@+id/et_business_profile_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@color/user_profile_color"
+                android:hint="@string/user_profile_text_box"
+                android:padding="25dp"
+                android:textColorHint="@color/txt_light"
+                app:layout_constraintTop_toBottomOf="@+id/tv_search" />
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/et_business_profile_text"
+                app:tabMode="fixed"
+                android:background="@color/black30"
+                app:tabTextAppearance="@style/MyCustomTextAppearance" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

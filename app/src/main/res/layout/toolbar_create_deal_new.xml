@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar_root"
+        android:elevation="4dp"
+        android:layout_height="?actionBarSize">
+
+    <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|start"
+            android:background="@drawable/ic_arrow_left" />
+
+
+    <TextView
+            android:id="@+id/title_center_text_home_tool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/new_deals"
+            android:textColor="@color/btn_gray"
+            android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/toolbar_btn_Submit"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|end"
+            android:backgroundTint="@color/btn_gray"
+            android:insetTop="10dp"
+            android:insetRight="5dp"
+            android:insetBottom="10dp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+</androidx.appcompat.widget.Toolbar>

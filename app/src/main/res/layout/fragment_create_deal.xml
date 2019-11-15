@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar_create_deal_new" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_root"
+        android:layout_marginBottom="8dp"
+        android:background="@color/btn_gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewDivider"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                tools:context=".ui.business_home.fragment.create_deals.CreateDealFragment">
+                <!--                <HorizontalScrollView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:scrollbars="horizontal">-->
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/txt_light"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCreateDeals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:background="@color/txt_light"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+                <!--                </HorizontalScrollView>-->
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="12dp"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_deal_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="@string/deal_title"
+                            android:textSize="15sp" />
+
+                    <EditText
+                            android:id="@+id/et_deal_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/txt_light"
+                            android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_create_deals_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/discount"
+                        android:textColor="@color/gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_discount_create_deals"
+                                android:layout_width="0dp"
+                            android:layout_height="30dp"
+                                android:layout_weight="3"
+                            android:background="@null"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:paddingStart="3dp"
+                            android:singleLine="true" />
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                                android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                            android:gravity="center_vertical" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/txt_light" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/deal_start_time" />
+
+                        <TextView
+                            android:id="@+id/tv_deal_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="00:00 AM" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/txt_light" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deal End Time" />
+
+                        <TextView
+                            android:id="@+id/tv_deal_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="00:00 PM" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+
+                            android:background="@color/txt_light" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Valid From" />
+
+                        <TextView
+                            android:id="@+id/tv_deal_valid_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                                android:text="MM/DD/YYYY" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/txt_light" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Valid Until" />
+
+                        <TextView
+                            android:id="@+id/tv_deal_Valid_Until"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                                android:text="MM/DD/YYYY" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/txt_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_description_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descrpition"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="2dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_description_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp"
+                        android:backgroundTint="@color/txt_light"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <!--        <LinearLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_gravity="bottom"-->
+                <!--                android:layout_marginTop="50dp">-->
+
+
+                <!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+                <!--                    android:mid="@+mid/business_bottomNavigationView"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    app:itemIconTint="@android:color/darker_gray"-->
+                <!--                    app:labelVisibilityMode="unlabeled"-->
+                <!--                    app:menu="@menu/navigation" />-->
+
+                <!--        </LinearLayout>-->
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+

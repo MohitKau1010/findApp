@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "653810867672",
+    "firebase_url": "https://brewfinder-18ff5.firebaseio.com",
+    "project_id": "brewfinder-18ff5",
+    "storage_bucket": "brewfinder-18ff5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653810867672:android:36c1f6515878ee872c66ad",
+        "android_client_info": {
+          "package_name": "com.brewfinder.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653810867672-77jr0u95ab04ie5r8ubo6m3so3l7r1j2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSYSwhX5H0h3LBtafUu-b_zjSqoQj1Qtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653810867672-77jr0u95ab04ie5r8ubo6m3so3l7r1j2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

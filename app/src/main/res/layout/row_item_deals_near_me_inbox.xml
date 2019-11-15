@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_deal_near_me_inbox"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_icon"
+            app:civ_border_color="@color/btn_skyblue"
+            app:civ_border_width="2dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profile_image_deal_near_me_inbox">
+
+            <TextView
+                android:id="@+id/tv_deal_near_me_inbox_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/circle_orange"
+                android:drawablePadding="5dp"
+                android:text="Brianne Johnson"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_deal_near_me_inbox_chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="5dp"
+                android:text="10:47PM"
+                android:textColor="@color/txt_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_deal_near_me_inbox_chatting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_deal_near_me_inbox_user_name"
+                android:layout_marginStart="30dp"
+                android:text="Road trip with girls."
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_deal_near_me_inbox_paper_clip"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tv_deal_near_me_inbox_user_name"
+                android:layout_alignStart="@id/tv_deal_near_me_inbox_chatting"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/paper_clip" />
+
+            <TextView
+                android:id="@+id/tv_deal_near_me_inbox_body_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_deal_near_me_inbox_chatting"
+                android:layout_marginStart="30dp"
+                android:text="Body Text"
+                android:textColor="@color/txt_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

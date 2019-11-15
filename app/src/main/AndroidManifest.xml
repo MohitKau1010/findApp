@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.brewfinder.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+            android:name=".BrewFinder"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <!-- Splash Activity -->
+        <activity android:name=".ui.base_screen.activity.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Welcome Activity -->
+        <activity
+                android:name=".ui.base_screen.activity.welcome.WelcomeActivity"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+                android:name=".ui.business.activity.BusinessHomeActivity"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan" /> <!-- Business Home Activity -->
+        <activity
+                android:name="com.brewfinder.app.ui.user.activity.HomeUserActivity"
+                android:windowSoftInputMode="adjustPan" /> <!-- Home User Activity -->
+        <activity android:name=".ui.base_screen.activity.agreement.UserAgreementActivity" /> <!-- User Agreement Activity -->
+        <activity android:name=".ui.base_screen.activity.getloaction.GetLocationActivity" />
+        <activity
+                android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+                android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>
